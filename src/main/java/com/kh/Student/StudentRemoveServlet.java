@@ -19,11 +19,11 @@ import jakarta.servlet.http.HttpServletResponse;
 //여기까지 실습하면  일용자 이름입력하면
 //학생의 데이터가 삭제 되었습니다 라고 페이지로 뜨고!!
 //일용자1 입력하면 검색한 이름이 존재하지 않습니다라고 뜸!!!
-
+//12/29 16:30분에 service부분만 doGet으로 수정!!!
 @WebServlet("/student/remove")
 public class StudentRemoveServlet extends HttpServlet{
 	@Override
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		List<Student> sList = new ArrayList<Student>();
 		sList.add(new Student("일용자",99,88));
 		sList.add(new Student("이용자",88,77));

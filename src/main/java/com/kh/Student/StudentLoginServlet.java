@@ -12,7 +12,8 @@ import jakarta.servlet.http.HttpServletResponse;
 /*
  * url: /student/login
  */
-
+// 이거 페이지로 출력해서 로그인 입력하니 null값나옴...
+//내가잘못입력했나....
 @WebServlet("/student/login")
 public class StudentLoginServlet extends HttpServlet {
 	//doGet, doPost 메소드로 get요청과 post요청을 하나의 서블릿에서 처리가능하다
@@ -24,7 +25,8 @@ public class StudentLoginServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//브라우저 주소표시쥴에 http://localhost:8888/student/login입력
 		//엔터를 쳐서 서버에 요청하는것은 get방식요청(기본값??))
-		
+		//여기서 로그인창이랑은 뜨는데 일용자입력 패스워드 입력할때 ****로안보이고
+		//그대로 비밀번호 노출되는것을 확인함!!!
 		RequestDispatcher view;
 		view = request.getRequestDispatcher("/WEB-INF/views/student/login.jsp");
 		view.forward(request, response);

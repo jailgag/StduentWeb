@@ -16,8 +16,9 @@ public class StudentInsertServlet extends HttpServlet {
 	//일용자 이용자 입력하면 
 	//이미존재하는 이름입니다!!뜸!!
 	//다른이름 입력하면 존재하지 않습니다 뜸!!!여긴이상없음!!!
+	//여기도 12/29 16:34분 service를 doPost로 바꿔줌!!!
 	@Override
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	List<Student> sList = new ArrayList<Student>();
 	sList.add(new Student("일용자",99,88));
 	sList.add(new Student("이용자",88,77));

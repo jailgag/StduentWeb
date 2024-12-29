@@ -15,11 +15,12 @@ import jakarta.servlet.http.HttpServletResponse;
  */
 // 밑에 student/manage입력하면 페이지에 삭제 뜨고 거기에 이름입력하면
 //삭제되었습니다/ 없는이름입력하면 검색한이름이 존재하지않습니다 뜸!!!
+//24/12/29 15:33 service부분을 doGet으로 수정함!!
 @WebServlet("/student/manage")
 public class ManageViewServlet extends HttpServlet{
 
 	@Override
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestDispatcher view;
 		view = request.getRequestDispatcher("/WEB-INF/views/student/manage.jsp"); //목적지 
 		view.forward(request, response);
